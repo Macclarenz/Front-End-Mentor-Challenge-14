@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+#map-container {
+  background-color: #1d1d1d;
+  height: 100vh;
+  width: 100%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.leaftlet-top {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  #map-container {
+    height: 110vh;
+  }
+
+  .leaflet-control-container .leaftlet-top {
+    top: 0 !important;
+  }
+}
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+.header-background {
+  height: 55vh;
+  width: 100%;
+}
+.header-background img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: inherit;
+  width: inherit;
+}
+
+.main-container {
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  bottom: 95%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 500px;
+  z-index: 10;
+}
+.main-container h1 {
+  color: white;
+  font-weight: 500;
+  font-size: 26px;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.main-container .input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border-radius: 0.8em;
+  margin-block: 1em;
+  width: 100%;
+  max-width: 500px;
+}
+.main-container .input-container input,
+.main-container .input-container button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 1em;
+  width: 100%;
+}
+.main-container .input-container .input-text {
+  background-color: white;
+  border-radius: 0.8em 0 0 0.8em;
+  text-overflow: ellipsis;
+}
+.main-container .input-container .input-text:hover {
+  cursor: pointer;
+}
+.main-container .input-container .input-button {
+  background-color: #2b2b2b;
+  border-radius: 0 0.8em 0.8em 0;
+  cursor: pointer;
+  position: relative;
+  width: unset;
+  transition: all 250ms ease;
+}
+.main-container .input-container .input-button:hover, .main-container .input-container .input-button:focus {
+  background-color: #969696;
+}
+.main-container .result-container {
+  background-color: white;
+  border-radius: 0.8em;
+  padding-block: 1.75em 1.5em;
+}
+.main-container .result-container .result-panel {
+  padding: 0 1em 0 1em;
+  text-align: center;
+}
+.main-container .result-container .result-panel h2 {
+  color: #969696;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.main-container .result-container .result-panel p {
+  color: #2b2b2b;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+.main-container .result-container .result-panel:not(:first-child) {
+  margin-top: 1em;
+}
+.main-container .result-container .result-panel:first-child h2 {
+  margin-top: 0;
+}
+
+@media (min-width: 900px) {
+  .main-container {
+    max-width: 1200px;
+  }
+  .main-container .input-container {
+    margin: 1em auto;
+  }
+  .main-container .result-container {
+    display: grid;
+    grid-template: 1fr/1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0em;
+    max-width: 1200px;
+    margin: 2.75em auto;
+  }
+  .main-container .result-container .result-panel {
+    padding: 2em 2em 1.75em;
+    height: auto;
+    text-align: left;
+    position: relative;
+  }
+  .main-container .result-container .result-panel h2 {
+    margin-block: 0 1em;
+  }
+  .main-container .result-container .result-panel p {
+    font-size: 28px;
+  }
+  .main-container .result-container .result-panel:not(:last-child)::after {
+    background: #969696;
+    content: "";
+    display: block;
+    position: absolute;
+    height: calc(100% - 4em);
+    width: 1px;
+    opacity: 0.5;
+    right: 0;
+    top: 2.5em;
+    bottom: 0;
+  }
+  .main-container .result-container .result-panel:not(:first-child) {
+    margin-top: 0;
+  }
+}/*# sourceMappingURL=main.css.map */

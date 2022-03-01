@@ -1,0 +1,21 @@
+@mixin flex($justify, $align, $direction: row, $wrap: nowrap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+@mixin grid($row, $column, $justify, $align, $gap: 0em) {
+    display: grid;
+    grid-template: $row / $column;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin reset() {
+    background-color: transparent;
+    border: none;
+    outline: none
+}

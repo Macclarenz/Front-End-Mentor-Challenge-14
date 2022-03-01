@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+  <link rel="stylesheet" href="./src/sass/main.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+
+  <script type = 'module' src = './src/js/main.js' defer></script>
+
+</head>
+<body>
+
+  <div class="header-background"><img src= "./images/pattern-bg.png" alt="pattern background"></div>
+  
+  <main class="main-container">
+    <h1>IP Address Tracker</h1>
+    <form id = 'myForm' class="input-container">
+      <input class = 'input-text' type="text" placeholder="Search for any IP address or domain" autocomplete="off"></input>
+      <button type="submit" class = 'input-button'>
+        <svg aria-label = 'arrow icon' xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
+      </button>
+    </form>
+
+    <div class="result-container">
+      <div class="result-panel" id = 'ipAddress'>
+        <h2>IP Address</h2>
+        <p class = 'result-text'>-<!-- 192.212.14.101 --></p>
+      </div>
+      <div class="result-panel" id = 'location'>
+        <h2>Location</h2>
+        <p class = 'result-text'>-<!-- Brooklyn, NY 10001 --></p>
+      </div>
+      <div class="result-panel" id = 'timezone'>
+        <h2>Timezone</h2>
+        <p class = 'result-text'>UTC <span class="timezone-text">-00:00<!-- -05:00 --></span></p>
+      </div>
+      <div class="result-panel" id = 'isp'>
+        <h2>ISP</h2>
+        <p class = 'result-text'>-<!-- SpaceX Starlink --></p>
+      </div>
+    </div>
+  </main>
+
+  <div id="map-container">
+
+  </div>
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+
+</body>
+</html>
