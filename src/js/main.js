@@ -1,5 +1,5 @@
-import { createMap } from "./_map.js"
-import { getLocation } from "./_ipFind.js"
+import { createMap } from "./map.js"
+import { getLocation } from "./ipFind.js"
 
 const inputField = document.querySelector('.input-text')
 const form = document.querySelector('#myForm')
