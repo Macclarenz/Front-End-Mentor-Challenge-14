@@ -28,7 +28,7 @@ const createMap = (L, coordinates) => {
 // - Customize the icon with the one in images folder
 const customizeIcon = (L) => {
     const newIcon = L.icon({
-        iconUrl: '../../images/icon-location.svg',
+        iconUrl: './images/icon-location.svg',
         iconSize: [46, 58]
     })
 

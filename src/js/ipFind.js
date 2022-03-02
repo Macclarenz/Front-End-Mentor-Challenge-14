@@ -28,7 +28,7 @@ const renderRawResponse = (rawResponse) => {
     const lattitude = rawResponse.location.lat
     const longitude = rawResponse.location.lng
 
-    // console.log(ipAddress, location, timezone, isp)
+    console.log(lattitude, longitude)
     return [
         ipAddress, 
         location, 
