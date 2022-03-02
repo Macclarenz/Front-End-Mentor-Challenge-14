@@ -28,6 +28,7 @@ const createMap = (L, coordinates) => {
 // - Customize the icon with the one in images folder
 const customizeIcon = (L) => {
     const newIcon = L.icon({
+        // - The location depends on how the github uploads the file to a certain location. It used to be in '../../images/fileName.svg'
         iconUrl: './images/icon-location.svg',
         iconSize: [46, 58]
     })
