@@ -28,7 +28,7 @@ const renderRawResponse = (rawResponse) => {
     const lattitude = rawResponse.location.lat
     const longitude = rawResponse.location.lng
 
-    console.log(lattitude, longitude)
+    // console.log(lattitude, longitude)
     return [
         ipAddress, 
         location, 
@@ -39,20 +39,3 @@ const renderRawResponse = (rawResponse) => {
 }
 
 export { getLocation } 
-
-/*
-
-as: {asn: 7127, name: 'SCE', route: '192.212.0.0/15', domain: '', type: ''}
-ip: "192.212.14.101"
-isp: "Southern California Edison"
-location:
-    city: "South San Gabriel"
-    country: "US"
-    geonameId: 5397771
-    lat: 34.04915
-    lng: -118.09462
-    postalCode: ""
-    region: "California"
-    timezone: "-08:00"
-
-*/

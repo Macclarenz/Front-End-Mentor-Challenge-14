@@ -4,6 +4,8 @@ import { getLocation } from "./ipFind.js"
 const inputField = document.querySelector('.input-text')
 const form = document.querySelector('#myForm')
 
+console.log('NOTE - Accuracy depends on how the isp and algorithm of api. Vpn may also affects how the location will be display. It doesn\'t present the location with 100% accuracy')
+
 const trigger = async () => {
     try {
         const gettingLocation = await getLocation(inputField.value)
