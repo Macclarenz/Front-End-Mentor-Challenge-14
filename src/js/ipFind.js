@@ -1,3 +1,4 @@
+// - Resquesting to get the data
 const getLocation = async (userIp) => {
     try {
         const url = 'https://geo.ipify.org/api/v2/country,city?'
@@ -20,6 +21,7 @@ const getLocation = async (userIp) => {
     }
 }
 
+// - Once it resolves it will renders the raw data from getLocation async function and returns the data it needs
 const renderRawResponse = (rawResponse) => {
     const ipAddress = rawResponse.ip
     const location = `${rawResponse.location.city}, ${rawResponse.location.region} ${rawResponse.location.postalCode}`
@@ -38,4 +40,5 @@ const renderRawResponse = (rawResponse) => {
     ]
 }
 
+// exports the getLocation() to be use by the main.js
 export { getLocation } 

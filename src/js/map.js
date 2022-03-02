@@ -1,6 +1,7 @@
 // - Creates the map here
 const createMap = (L, coordinates) => {
     const container = L.DomUtil.get('map-container');
+    // - This condition here it to check if the id for the map container is already initialized. If so it will set the its id to null for you to make another map
     if (container != null) {
         container._leaflet_id = null;
 
@@ -21,8 +22,6 @@ const createMap = (L, coordinates) => {
             map.invalidateSize()
         })
     }
-
-
 }
 
 // - Customize the icon with the one in images folder
@@ -33,9 +32,11 @@ const customizeIcon = (L) => {
         iconSize: [46, 58]
     })
 
+    // - Returns the new icon for the createMarker() to be use instead of the default icon
     return newIcon
 }
 
+// - Creates the marker here
 const createMarker = (L, coordinates, map) => {
     const icon = customizeIcon(L)
     L.marker(coordinates, {
@@ -43,6 +44,7 @@ const createMarker = (L, coordinates, map) => {
     }).addTo(map)
 }
 
+// - Exports the createMap() here
 export {
     createMap
 }
